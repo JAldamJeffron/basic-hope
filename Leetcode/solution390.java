@@ -14,4 +14,12 @@ class solution390 {
         }
         return head;
     }
+    
+    public static void main(String[] args) {
+        solution390 sol = new solution390();
+        System.out.println("n=9: " + sol.lastRemaining(9));
+        System.out.println("n=1: " + sol.lastRemaining(1));
+        System.out.println("n=2: " + sol.lastRemaining(2));
+        System.out.println("n=10: " + sol.lastRemaining(10));
+    }
 }
