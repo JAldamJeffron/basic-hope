@@ -5,7 +5,7 @@ class Automation {
         this.Motion = Motion;
         this.time = time;
         this.temp = temp;
-        conditions c = new conditions(new Automation(Motion, time, temp));
+        conditions c = new conditions(this);
         c.motionlight();
         c.clocklight();
         c.tempAC();
@@ -96,9 +96,6 @@ class AC extends devices{
 class SmartAutomation{
     public static void main(String[] args) {
         // Example usage
-        new Automation(true, 19, 35);
-        
+        new Automation(true, 19, 35);   
     }
-
-    
 }
