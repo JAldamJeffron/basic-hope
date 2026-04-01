@@ -1,0 +1,39 @@
+class test{
+    public static int[] sub(int[] a){
+        int im=0,jm=0;
+        for(int i=0;i<a.length;i++){
+            boolean moun=false;
+            int ii=0,jj=0,inc=0;
+            for(int j=i+1;j<a.length;j++){
+                if(a[j]>a[j-1]){
+                    moun=true;
+                    inc++;
+                }
+                else{
+                    if(moun && (j-i)%2==0 && (j-i)+1==(2*(inc+1)-1)){
+                        ii=i;
+                        jj=j;
+                    }
+                }
+            }
+            if((jj-ii)>=jm-im){
+                jm=jj;
+                im=ii;
+            }
+        }
+        if(jm-im ==0) return new int[0];
+        int[] arr= new int[(jm-im)+1];
+        int k=0;
+        for(int i=im;i<=jm;i++){
+            arr[k++]=a[i];
+        }
+        return arr;
+    }
+    public static void main(String[] args) {
+        int[] a = {2,1,4,7,3,2,5};
+        int[] b = sub(a);
+        for(int i=0;i<b.length;i++){
+            System.out.print(b[i]+" ");
+        }
+    }
+}
