@@ -1,0 +1,1 @@
+# Fix Java Main Class Error - COMPLETED ✅\n\n## Summary:\n- Duplicate `main.java` deleted.\n- `Main.java` restored & fixed.\n- Compiles and runs successfully.\n\n## Corrected Command:\n`cd 'c:/Users/jeffr/OneDrive/Desktop/basic hope/Holiday task'; javac Main.java; java Main`\n\nDelete this file if desired.
