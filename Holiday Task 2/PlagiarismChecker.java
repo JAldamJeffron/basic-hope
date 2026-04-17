@@ -1,21 +1,5 @@
 import java.util.*;
 
-class Word implements Comparable<Word> {
-    String value;
-
-    public Word(String value) {
-        this.value = value.toLowerCase();
-    }
-
-    public int compareTo(Word other) {
-        return this.value.compareTo(other.value);
-    }
-
-    public String toString() {
-        return value;
-    }
-}
-
 public class PlagiarismChecker {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -72,5 +56,21 @@ public class PlagiarismChecker {
 
         System.out.println("\nANALYSIS RESULT:-");
         System.out.println("Similarity Score:" + String.format("%.2f", similarity) + "%");
+    }
+}
+
+class Word implements Comparable<Word> {
+    String value;
+
+    public Word(String value) {
+        this.value = value.toLowerCase();
+    }
+
+    public int compareTo(Word other) {
+        return this.value.compareTo(other.value);
+    }
+
+    public String toString() {
+        return value;
     }
 }
